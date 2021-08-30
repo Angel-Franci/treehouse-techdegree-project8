@@ -1,0 +1,126 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: rgb(248, 248, 248);
+}
+
+.tint {
+    position: fixed;
+background-color: rgba(0, 0, 0, 0.459);
+z-index: 6;
+width: 100%;
+height: 100%;
+display: none;
+}
+
+h3 {
+    margin: 20px 0px 0px 40px;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    grid-gap: 25px;
+    margin: 20px 25px 0px 40px;
+}
+
+.image {
+    display: grid;
+    grid-template-areas: 
+    "img name name name"
+    "img email email email"
+    "img city city city"
+    ;
+    padding: 15px 15px 15px 15px;
+    border: rgba(110, 110, 110, 0.603) solid 2px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+@keyframes push {
+    50% {
+      transform: scale(1.05);
+    }
+  
+    100%{
+      transform: scale(1);
+    }
+  }
+
+.image:hover {
+    animation: push 1s ease-in-out;
+    cursor: pointer;
+}
+
+.image :nth-child(2) {
+    grid-area: name;
+    margin: 25px 0px 0px 0px;
+    text-align: left;
+}
+
+.image :nth-child(3) {
+    grid-area: email;
+    margin: -15px 0px 0px 0px;
+    text-align: left;
+}
+
+.image :nth-child(4) {
+    grid-area: city;
+    margin: -15px 0px 0px 0px;
+    text-align: left;
+}
+
+.image img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    grid-area: img;
+    margin-right: 10px;
+}
+
+.cardwrap {
+    position: fixed;
+    margin-left: 35.5%;
+    margin-top: -80vh;
+    z-index: 12;
+    width: 30.5%;
+    display: none;
+}
+
+.card{
+    height: 400px;
+    width: 100%;
+    background-color: rgb(238, 236, 236);
+    text-align: center;
+    padding-top: 7px;
+    border-radius: 6px;
+}
+
+.x{
+    text-align: right;
+    margin-right: 30px;
+    margin-bottom: -22px;
+    cursor: pointer;
+}
+
+.card img {
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.card h5 {
+    margin-top: 10px;
+}
+
+.line {
+    width: 90%;
+    height: 2px;
+    background-color: black;
+    margin: 25px 0px 25px 0px;
+    margin-left: 5%;
+}
